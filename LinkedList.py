@@ -55,7 +55,7 @@ class LinkedList(object):
             previous = node
             node = node.next
 
-    def removePos(self, index, all=False):
+    def removePos(self, index):
         count = 0
         node = self.head
         previous = None
@@ -67,13 +67,12 @@ class LinkedList(object):
                 else:
                     self.head = node.next
                     node = self.head
-                if not all:
-                    return
+                return
             else:
                 previous = node
                 node = node.next
 
-    def remove(self, val, all=True):
+    def remove(self, val, all=False):
         node = self.head
         previous = None 
         while node:
