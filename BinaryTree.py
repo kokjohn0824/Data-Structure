@@ -79,6 +79,5 @@ class BinaryTree():
 
     @staticmethod
     def equal(first, second):
-        return (not first and not second) or \
-    (first and second and (first.data == second.data) \
+        return (not first and not second) or (first and second and (first.data == second.data) \
     and BinaryTree.equal(first.left, second.left) and BinaryTree.equal(first.right, second.right))
