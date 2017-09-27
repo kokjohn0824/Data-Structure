@@ -104,21 +104,3 @@ class Graph(object):
             if not visited[i]:
                 connected_components.append(self.DFS(i))
         return connected_components
-
-
-g = Graph(5)
-g.add_edge(2, 3)
-g.add_edge(0, 1)
-g.add_edge(1, 4)
-g.add_edge(1, 4)
-g.add_edge(4, 1)
-g.add_edge(3, 1)
-g.print_all()
-print(g.DFS(0))
-print(g.BFS(0))
-print('-' * 50)
-g.delete_edge(1, 3)
-g.print_all()
-print(g.DFS(2))
-print(g.BFS(0))
-print(g.connected())
